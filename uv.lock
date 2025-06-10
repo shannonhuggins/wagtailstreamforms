@@ -904,8 +904,8 @@ requires-dist = [
     { name = "django-recaptcha", specifier = ">=4.0.0" },
     { name = "psycopg", specifier = ">=3.2.9" },
     { name = "unidecode", specifier = ">=0.4.14,<2.0" },
-    { name = "wagtail", specifier = ">=4.1,<7.0" },
-    { name = "wagtail-generic-chooser", specifier = ">=0.5.0,<0.7" },
+    { name = "wagtail", specifier = ">=4.1,<=7.0" },
+    { name = "wagtail-generic-chooser", specifier = ">=0.5.0,<=0.7" },
     { name = "wagtail-modeladmin", specifier = ">=2.2.0" },
 ]
 
