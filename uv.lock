@@ -879,7 +879,7 @@ wheels = [
 
 [[package]]
 name = "wagtailstreamforms"
-version = "0.0.0"
+version = "4.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "django-recaptcha" },
