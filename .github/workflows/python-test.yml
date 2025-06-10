@@ -28,6 +28,7 @@ jobs:
           - py311-dj42-wt60
           - py311-dj42-wt62
           - py311-dj42-wt64
+          - py311-dj42-wt70
         include:
           - python-version: "3.11"
             tox_env: py311-dj42-wt60
@@ -35,6 +36,8 @@ jobs:
             tox_env: py311-dj42-wt62
           - python-version: "3.11"
             tox_env: py311-dj42-wt64
+          - python-version: "3.11"
+            tox_env: py311-dj42-wt70
 
     steps:
       - uses: actions/checkout@v4
