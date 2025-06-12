@@ -4,7 +4,7 @@ from django.shortcuts import redirect
 from django.template.response import TemplateResponse
 from django.urls import include, path, reverse
 from django.utils.translation import gettext_lazy as _
-from wagtail.admin.views import ModelChooserViewSet
+from wagtail.admin.viewsets.chooser import ModelChooserViewSet
 from wagtail.admin.widgets import AdminChooser
 from wagtail import hooks
 from wagtail.admin import messages as wagtail_messages
