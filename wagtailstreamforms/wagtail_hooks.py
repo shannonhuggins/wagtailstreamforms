@@ -231,24 +231,3 @@ def process_form(page, request, *args, **kwargs):
                 )
 
 
-class WagtailStreamFormsChooserViewSet(ModelChooserViewSet):
-    icon = "form"
-    model = Form
-    page_title = _("Choose a form")
-    per_page = 10
-
-
-class WagtailStreamFormsChooser(AdminChooser):
-    choose_one_text = _("Choose a form")
-    choose_another_text = _("Choose another form")
-    link_to_chosen_text = _("Edit this form")
-    model = Form
-    choose_modal_url_name = "wagtailstreamforms_chooser:choose"
-    icon = "form"
-
-
-@hooks.register("register_admin_viewset")
-def register_wagtailstreamforms_chooser_viewset():
-    return WagtailStreamFormsChooserViewSet(
-        "wagtailstreamforms_chooser", url_prefix="wagtailstreamforms-chooser"
-    )

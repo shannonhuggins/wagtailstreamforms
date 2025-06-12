@@ -13,21 +13,10 @@ class InfoBlock(blocks.CharBlock):
         return mark_safe('<div style="margin-top:5px;padding:0.9em 1.2em;">%s</div>' % shown_value)
 
 
-class FormChooserBlock(blocks.ChooserBlock):
-    @cached_property
-    def target_model(self):
-        from .models import Form
+class FormChooserBlock(ModelChooserBlock):
+    def __init__(self, **kwargs):
+        super().__init__(target_model='wagtailstreamforms.Form', **kwargs)
 
-        return Form
-
-    @cached_property
-    def widget(self):
-        from .wagtail_hooks import WagtailStreamFormsChooser
-
-        return WagtailStreamFormsChooser()
-
-    def get_form_state(self, value):
-        return self.widget.get_value_data(value)
 
 
 class WagtailFormBlock(blocks.StructBlock):
